@@ -1,0 +1,95 @@
+.header {
+    background: rgba($color: $white, $alpha: 0);
+    transition: all 0.25s ease-in-out;
+    &.active {
+        background: rgba($color: $white, $alpha: 1);
+    }
+}
+.banner {
+    background-image: url("../img/bg-banner.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-top: $headerheight + 80;
+    .row {
+        align-items: center;
+    }
+    h1 {
+        color: $secondary;
+        position: relative;
+        > span {
+            position: relative;
+            z-index: 2;
+        }
+        &::before {
+            content: "";
+            background-image: url("../img/waves.svg");
+            background-position: center center;
+            height: 58px;
+            width: 111px;
+            position: absolute;
+            left: -20px;
+            top: -15px;
+        }
+    }
+}
+.section {
+    padding-top: $spacer * 10;
+    padding-bottom: $spacer * 10;
+}
+.main-heading {
+    position: relative;
+    color: $secondary;
+    margin-bottom: $spacer * 1.25;
+    > span {
+        position: relative;
+        z-index: 2;
+    }
+    &::before {
+        content: "";
+        background-image: url("../img/wave.svg");
+        background-position: center center;
+        height: 14px;
+        width: 85px;
+        position: absolute;
+        left: -20px;
+        top: 3px;
+    }
+    &.inverse {
+        &::before {
+            background-image: url("../img/wave-white.svg");
+        }
+    }
+}
+
+.how-we {
+    background-color: $primary;
+    background-image: url("../img/banana-waves.svg"), url("../img/banana.svg");
+    background-position: top right, left bottom;
+    background-repeat: no-repeat;
+    padding-bottom: $spacer * 8;
+    position: relative;
+}
+
+.work-grid {
+    padding-top: $spacer * 4;
+    padding-bottom: $spacer * 4;
+    [class*="col"],
+    [class^="col"] {
+        &:nth-child(even) {
+            margin-top: -$spacer * 1.5;
+            margin-bottom: $spacer * 3;
+        }
+    }
+    .img-work {
+        border-radius: 1rem;
+    }
+}
+
+footer{
+    background-image: url("../img/banana-footer.svg"), url("../img/wave-footer.svg");
+    background-position: bottom right, left bottom;
+    background-repeat: no-repeat;
+    padding-bottom: $spacer * 5;
+    padding-top: $spacer * 5;
+}

@@ -2,7 +2,7 @@ $(document).ready(function () {
     AOS.init();
 
     $(function () {
-        var shrinkHeader = 200;
+        var shrinkHeader = 150;
         $(window).scroll(function () {
             var scroll = getCurrentScroll();
             if (scroll >= shrinkHeader) {
@@ -15,5 +15,10 @@ $(document).ready(function () {
         function getCurrentScroll() {
             return window.pageYOffset;
         }
+    });
+
+    $(".navbar-toggler").click(function () {
+        $(this).toggleClass("expand");
+        $(".navbar-collapse").toggleClass("expand");
     });
 });

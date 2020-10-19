@@ -190,7 +190,7 @@ a {
 
   @include hover() {
     color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+    //text-decoration: $link-hover-decoration;
   }
 }
 
@@ -312,8 +312,7 @@ button {
 //
 // Credit: https://github.com/suitcss/base/
 button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: none;
 }
 
 input,

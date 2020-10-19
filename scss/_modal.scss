@@ -36,7 +36,7 @@
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: $modal-dialog-margin;
+  //margin: $modal-dialog-margin;
   // allow clicks to pass through for custom click handling to close modal
   pointer-events: none;
 
@@ -112,11 +112,11 @@
   // counteract the pointer-events: none; in the .modal-dialog
   color: $modal-content-color;
   pointer-events: auto;
-  background-color: $modal-content-bg;
+  //background-color: $modal-content-bg;
   background-clip: padding-box;
-  border: $modal-content-border-width solid $modal-content-border-color;
-  @include border-radius($modal-content-border-radius);
-  @include box-shadow($modal-content-box-shadow-xs);
+  //border: $modal-content-border-width solid $modal-content-border-color;
+  //@include border-radius($modal-content-border-radius);
+  //@include box-shadow($modal-content-box-shadow-xs);
   // Remove focus outline from opened modal
   outline: 0;
 }
@@ -130,7 +130,9 @@
   width: 100vw;
   height: 100vh;
   background-color: $modal-backdrop-bg;
-
+  background-image: url("../img/wave-bg-top.svg"), url("../img/banana-footer.svg");
+  background-repeat: no-repeat;
+  background-position: left top, right bottom;
   // Fade for backdrop
   &.fade { opacity: 0; }
   &.show { opacity: $modal-backdrop-opacity; }
@@ -143,7 +145,7 @@
   align-items: flex-start; // so the close btn always stays on the upper right corner
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
   padding: $modal-header-padding;
-  border-bottom: $modal-header-border-width solid $modal-header-border-color;
+  // border-bottom: $modal-header-border-width solid $modal-header-border-color;
   @include border-top-radius($modal-content-inner-border-radius);
 
   .close {
@@ -176,7 +178,7 @@
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
   padding: $modal-inner-padding - $modal-footer-margin-between / 2;
-  border-top: $modal-footer-border-width solid $modal-footer-border-color;
+  // border-top: $modal-footer-border-width solid $modal-footer-border-color;
   @include border-bottom-radius($modal-content-inner-border-radius);
 
   // Place margin between footer elements
@@ -197,36 +199,37 @@
 }
 
 // Scale up the modal
-@include media-breakpoint-up(sm) {
   // Automatically set modal's width for larger viewports
-  .modal-dialog {
-    max-width: $modal-md;
-    margin: $modal-dialog-margin-y-sm-up auto;
-  }
+// @include media-breakpoint-up(sm) {
 
-  .modal-dialog-scrollable {
-    max-height: subtract(100%, $modal-dialog-margin-y-sm-up * 2);
+  // .modal-dialog {
+  //   max-width: $modal-md;
+  //   margin: $modal-dialog-margin-y-sm-up auto;
+  // }
 
-    .modal-content {
-      max-height: subtract(100vh, $modal-dialog-margin-y-sm-up * 2);
-    }
-  }
+  // .modal-dialog-scrollable {
+  //   max-height: subtract(100%, $modal-dialog-margin-y-sm-up * 2);
 
-  .modal-dialog-centered {
-    min-height: subtract(100%, $modal-dialog-margin-y-sm-up * 2);
+  //   .modal-content {
+  //     max-height: subtract(100vh, $modal-dialog-margin-y-sm-up * 2);
+  //   }
+  // }
 
-    &::before {
-      height: subtract(100vh, $modal-dialog-margin-y-sm-up * 2);
-      height: min-content;
-    }
-  }
+  // .modal-dialog-centered {
+  //   min-height: subtract(100%, $modal-dialog-margin-y-sm-up * 2);
 
-  .modal-content {
-    @include box-shadow($modal-content-box-shadow-sm-up);
-  }
+  //   &::before {
+  //     height: subtract(100vh, $modal-dialog-margin-y-sm-up * 2);
+  //     height: min-content;
+  //   }
+  // }
 
-  .modal-sm { max-width: $modal-sm; }
-}
+  // .modal-content {
+  //   @include box-shadow($modal-content-box-shadow-sm-up);
+  // }
+
+  // .modal-sm { max-width: $modal-sm; }
+// }
 
 @include media-breakpoint-up(lg) {
   .modal-lg,

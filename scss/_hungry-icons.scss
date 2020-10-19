@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'solarfield-icon';
+  src:  url('../fonts/hungry-icon.eot?88cd04');
+  src:  url('../fonts/hungry-icon.eot?88cd04#iefix') format('embedded-opentype'),
+    url('../fonts/hungry-icon.ttf?88cd04') format('truetype'),
+    url('../fonts/hungry-icon.woff?88cd04') format('woff'),
+    url('../fonts/hungry-icon.svg?88cd04#solarfield-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'solarfield-icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-close:before {
+  content: "\e904";
+}
+.icon-arrow_forward:before {
+  content: "\e900";
+}
+.icon-fb:before {
+  content: "\e901";
+}
+.icon-insta:before {
+  content: "\e902";
+}
+.icon-twitter:before {
+  content: "\e903";
+}

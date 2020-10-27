@@ -7,13 +7,13 @@
   color: color-yiq($background);
   @include gradient-bg($background);
   border-color: $border;
-  @include box-shadow(6px 6px 0 0 $yellow);
+  @include box-shadow(6px 6px 0 0 $hover-background);
 
   @include hover() {
     color: color-yiq($hover-background);
     @include gradient-bg($hover-background);
     border-color: $hover-border;
-    @include box-shadow(0 0 0 0 $yellow);
+    @include box-shadow(0 0 0 0 $hover-background);
 
   }
 
@@ -23,7 +23,7 @@
     @include gradient-bg($hover-background);
     border-color: $hover-border;
     @if $enable-shadows {
-      @include box-shadow(6px 6px 0 0 $yellow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5));
+      @include box-shadow(6px 6px 0 0 $hover-background, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5));
     } @else {
       // Avoid using mixin so we can pass custom focus shadow properly
       box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);

@@ -36,15 +36,17 @@ $grays: map-merge(
 $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
+$pink:    #D3405C !default;
+$pink-lighter:    #EA6A82 !default;
 $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #FCAE00 !default;
 $yellow-lighter:  #FFCE3D !default;
-$green:   #28a745 !default;
+$green:   #DDED7C !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 $choco:   #7A482D !default;
+$green-darker: #19593F !default;
 
 $colors: () !default;
 $colors: map-merge(
@@ -66,8 +68,8 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $yellow-lighter !default;
-$secondary:     $choco !default;
+$primary:       $pink !default;
+$secondary:     $green-darker !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $orange !default;
@@ -295,9 +297,9 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
-$h1-font-size:                $font-size-base * 2.75 !default;
-$h2-font-size:                $font-size-base * 2.25 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
+$h1-font-size:                $font-size-base * 3 !default;
+$h2-font-size:                $font-size-base * 2.5 !default;
+$h3-font-size:                $font-size-base * 2 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
